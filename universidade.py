@@ -42,12 +42,12 @@ Entrada:
 {input}
 -----------------
                         Formato de saída:
-                        {formato_saida}""",
+                        {format_instructions}""",
                         input_variables=["input"],
-                        partial_variables={"formato_saida" : parser.get_format_instructions()})
-        cadeia = template | llm | parser
-        resposta = cadeia.invoke({"input" : input})
-        universidade = resposta['universidade']
+                        partial_variables={"format_instructions" : parser.get_format_instructions()})
+        chain = template | llm | parser
+        response = chain.invoke({"input" : input})
+        universidade = response['universidade']
         universidade = universidade.lower().strip()
         dados = busca_dados_da_universidade(universidade)
         return json.dumps(dados)

@@ -9,7 +9,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.pydantic_v1 import BaseModel, Field
 
 def buscar_dados_de_estudante(estudante):
-        dados = pd.read_csv('https://raw.githubusercontent.com/alura-cursos/3860-langchain-agentes-python/projeto-base/documentos/estudantes.csv')
+        dados = pd.read_csv('documentos/estudantes.csv')
         dados_do_estudante = dados[dados['USUARIO'] == estudante]
         if dados_do_estudante.empty:
             return {}
