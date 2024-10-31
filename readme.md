@@ -25,11 +25,6 @@ pip install langchain openai
 ```
 ## Exemplos de Uso
 
-### Inicialize o agente
-```python
-agent = AgentOpenAIFunctions()
-agent_executor = AgentExecutor(agent=agent.agent, tools=agent.tools)
-```
 ### Faça consultas
 ```python
 pergunta = "Quais os dados de Ana?"
