@@ -45,8 +45,8 @@ Para usar este projeto, você precisará:
 1. Uma chave de API da OpenAI
 2. As dependências Python instaladas
 3. Configurar suas variáveis de ambiente:
-```bash
-export OPENAI_API_KEY="sua_chave_de_api"
+```env
+OPENAI_API_KEY=sua_chave_de_api
 ```
 
 
